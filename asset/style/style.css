@@ -1,0 +1,107 @@
+/*------------------FONTS------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root{
+    --Inter:'Inter', sans-serif;
+    --Lexend-Deca:'Lexend Deca', sans-serif;
+    --Very_dark_blue_main_background: hsl(233, 47%, 7%);
+    --Dark_desaturated_blue_card_background: hsl(244, 38%, 16%);
+    --Soft_violet_accent: hsl(277, 64%, 61%);
+    --White_main_heading_stats: hsl(0, 0%, 100%);
+    --Slightly_transparent_white_main_paragraph: hsla(0, 0%, 100%, 0.75);
+    --Slightly_transparent_white_stat_headings: hsla(0, 0%, 100%, 0.6);
+}
+/*------------------ALL--------------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border:1px red solid; */
+}
+body{
+    font-size: 15px;
+    font-family: var(--Lexend-Deca);
+    background-color: var(--Very_dark_blue_main_background);
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    height: 49rem;
+    width: 21rem;
+    margin: 5.5rem auto;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+/*------------------TOP-CARD-----------------------*/
+.card__top{
+    height: 15rem;
+    width: 100%;
+    background-color: var(--Soft_violet_accent);
+}
+.card__top__img{
+    height: 100%;
+    width: 100%;
+    opacity: .8;
+}
+/*----------------BOTTOM-CARD--------------------- */
+.card__bottom{
+    height: 100%;
+    padding: 3.5rem 2rem 2rem 2rem;
+    background-color: var(--Dark_desaturated_blue_card_background);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+.card__bottom__title{
+    color: var(--White_main_heading_stats);
+    font-size: 1.7rem;
+}
+.card__bottom__title span{
+    color: var(--Soft_violet_accent);
+}
+.card__bottom_description{
+    color: var(--Slightly_transparent_white_main_paragraph);
+}
+.card__bottom__stats__subtitle--1{
+    color: var(--White_main_heading_stats);
+}
+.card__bottom__stats__stadistics--1{
+color: var(--Slightly_transparent_white_stat_headings);
+}
+/*-----------------FOOTER------------------------- */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+@media(min-width:1120px){
+    .card{
+        width: 60rem;
+        height: 28rem;
+        flex-direction: row;
+    }
+    .card__top{
+        height:100%;
+        width: 100%;
+        background-color: var(--Soft_violet_accent);
+    }
+    .card__bottom{
+       order: -1;
+       text-align: left;
+       padding-left: 3rem;
+    }
+    .card__bottom__title{
+        font-size :2.5rem;
+
+    }
+
+    .query__order{
+        display: flex;
+        gap: 5.5rem;    }
+
+}
+
+
+
